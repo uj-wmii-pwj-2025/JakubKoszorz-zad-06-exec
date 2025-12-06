@@ -28,7 +28,7 @@ public class MyExecService implements ExecutorService {
                     }
                 }
             } catch (InterruptedException e) {
-                // Exit worker thread
+                Thread.currentThread().interrupt();
             } finally {
                 isTerminated.set(true);
             }
