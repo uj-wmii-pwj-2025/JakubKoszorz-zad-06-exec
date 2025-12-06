@@ -82,7 +82,6 @@ public class ExecServiceTest {
         s.execute(r1);
         List<Runnable> remaining = s.shutdownNow();
         assertTrue(s.isShutdown());
-        // Wszystkie zadania z kolejki powinny być oddane (w naszym przypadku kolejka pusta)
         assertNotNull(remaining);
     }
 
